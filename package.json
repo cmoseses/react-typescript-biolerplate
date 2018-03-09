@@ -1,0 +1,81 @@
+{
+  "name": "cruise-type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start": "webpack-dev-server --config webpack.dev.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test-shim.js",
+      "<rootDir>/test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/test-preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-redux": "5.0.6",
+    "react-router": "3.0.5",
+    "react-router-redux": "4.0.8",
+    "redux": "3.7.2",
+    "redux-actions": "^2.2.1",
+    "url-loader": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.8",
+    "@types/enzyme-to-json": "^1.5.0",
+    "@types/jest": "^22.1.2",
+    "@types/node": "^9.4.4",
+    "@types/react": "^16.0.36",
+    "@types/react-bootstrap": "^0.32.4",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "5.0.14",
+    "@types/react-router": "3.0.5",
+    "@types/react-router-redux": "4.0.48",
+    "@types/redux-actions": "^2.2.3",
+    "@types/redux-immutable": "^3.0.38",
+    "awesome-typescript-loader": "^3.4.1",
+    "bundle-loader": "^0.5.6",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "1.1.6",
+    "identity-obj-proxy": "^3.0.0",
+    "immutable": "^3.8.2",
+    "jest": "^22.4.0",
+    "jest-css-modules": "^1.1.0",
+    "node-sass": "^4.7.2",
+    "react-test-renderer": "^16.2.0",
+    "redux-immutable": "^4.0.0",
+    "reselect": "^3.0.1",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.20.1",
+    "ts-import-plugin": "^1.4.3",
+    "typescript": "^2.7.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "2.11.1"
+  }
+}

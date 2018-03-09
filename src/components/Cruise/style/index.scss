@@ -1,0 +1,33 @@
+$bold-border: 2px solid black;
+.cruise {
+  .flex {
+    display: flex;
+  }
+  .nav.nav-tabs {
+    border-bottom: $bold-border;
+    > li > a {
+      color: black;
+      background: white;
+      border: $bold-border;
+      border-radius: 10px 10px 0 0;
+      bottom: -9px;
+      margin-right: 0px;
+      margin-left: 2px;
+    }
+    > li.active > a {
+      color: white;
+      background: gray;
+      border: $bold-border;
+      border-bottom: none;
+      padding: 15px;
+      bottom: -1px;
+    }
+  }
+  .tab-content {
+    border: $bold-border;
+    border-top: none;
+  }
+  .aside {
+    border-left: $bold-border;
+  }
+}

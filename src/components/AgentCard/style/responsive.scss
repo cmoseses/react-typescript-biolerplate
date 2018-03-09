@@ -1,0 +1,19 @@
+/* device sizes */
+
+$large: 1200px;
+$medium: 992px;
+$small: 768px;
+@media (max-width: $small) {
+  .agent-card {
+    .name-label,
+    .resources-label {
+      display: block;
+    }
+    .divider:first-child,
+    .resource:first-child {
+      border-left: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+}

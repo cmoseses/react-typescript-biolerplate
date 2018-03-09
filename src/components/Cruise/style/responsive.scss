@@ -1,0 +1,14 @@
+/* device sizes */
+
+$large: 1200px;
+$medium: 992px;
+$small: 768px;
+$bold-border: 2px solid black;
+@media (max-width: $small) {
+  .cruise {
+    .aside {
+      border-left: none;
+      border-bottom: $bold-border;
+    }
+  }
+}

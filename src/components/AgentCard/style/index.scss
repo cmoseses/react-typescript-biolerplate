@@ -1,0 +1,80 @@
+$success-color: #cce8b5;
+$warning-color: #fffbb9;
+$bold-border: 2px solid black;
+@mixin success-background {
+  background-color: $success-color;
+}
+
+@mixin warning-background {
+  background-color: $warning-color;
+}
+
+@mixin custom-button {
+  color: black;
+  border-radius: 10px;
+  border: $bold-border;
+  box-shadow: none;
+  margin-left: 10px;
+  text-transform: capitalize;
+  background-color: lightgray;
+}
+
+.agent-card {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  a {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  &.idle,
+  .popover-idle {
+    @include success-background;
+    .popover.bottom > .arrow:after {
+      border-bottom-color: $success-color;
+    }
+  }
+  &.building,
+  .popover-building {
+    @include warning-background;
+    .popover.bottom > .arrow:after {
+      border-bottom-color: $warning-color;
+    }
+  }
+  .popover {
+    width: 80%;
+    max-width: none;
+  }
+  .gray-hole {
+    width: 40px;
+    height: 40px;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .divider {
+    border-left: 1px solid gray;
+    padding: 0 10px;
+    &:first-child {
+      margin-left: 20px;
+    }
+  }
+  .resource {
+    padding: 0 5px 0 5px;
+    display: inline-block;
+  }
+  .add-specify-resources {
+    display: inline-block;
+  }
+  .custom-button {
+    @include custom-button;
+    &.active,
+    &:hover {
+      background-color: white;
+    }
+  }
+}
