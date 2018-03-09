@@ -3,6 +3,7 @@
 * react
 * typescript
 * ducks
+* redux
 * reselect
 * immutable
 * jtest
