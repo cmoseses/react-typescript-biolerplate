@@ -7,4 +7,6 @@ config.devServer = {
 };
 config.plugins.push(new webpack.HotModuleReplacementPlugin());
 
+config.mode ='development';
+
 module.exports = config;
